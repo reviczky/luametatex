@@ -9,5 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Executable
+      run: chmod +x ./build.sh
     - name: Build
       run: ./build.sh --native
