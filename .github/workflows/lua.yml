@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Install packages
       run: |
-        apt-get update
-        apt-get install -y ninja-build
+        sudo apt-get update
+        sudo apt-get install -y ninja-build
 
     - name: Executable
       run: chmod +x ./build.sh
